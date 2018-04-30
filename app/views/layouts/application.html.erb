@@ -14,23 +14,23 @@
 
 
   <body>
-<div class="page-wrap">
-  <nav class="navbar" style="background-color: #e3f2fd;">
-      <ul>
-       <li><%= link_to "Home", root_path %></li>
-       <li><%= link_to "About", simple_pages_about_path %></li>
-       <li><%= link_to "Contact", simple_pages_contact_path %></li>
-      </ul>
-    </nav>
-</div>
-<h1  style="text-align: center;">Welcome to Bike Berlin</h1>
-<h2  style="text-align: center;">Your source for used bikes in Berlin</h2>
+    <div class="page-wrap">
+      <nav class="navbar" style="background-color: #e3f2fd;">
+        <ul>
+         <li><%= link_to "Home", root_path %></li>
+         <li><%= link_to "About", simple_pages_about_path %></li>
+         <li><%= link_to "Contact", simple_pages_contact_path %></li>
+        </ul>
+      </nav>
+    </div>
+    <h1  style="text-align: center;">Welcome to Bike Berlin</h1>
+    <h2  style="text-align: center;">Your source for used bikes in Berlin</h2>
     <%= yield %>
 
-    <footer class="navbar-default navbar-fixed-bottom" style="background-color: #e3f2fd;"">
+    <footer class="navbar-default navbar-fixed-bottom" style="background-color: #e3f2fd;">
       <div class="container-fluid">
-      <span class="text-muted" style="color: blue;">&copy; 2018 Giles Lewey</span>
-    </div>
+        <span class="text-muted" style="color: blue;">&copy; 2018 Giles Lewey</span>
+      </div>
     </footer>
   </body>
 </html>
