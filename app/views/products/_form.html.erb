@@ -26,6 +26,16 @@
     <%= form.text_field :image_url, id: :product_image_url %>
   </div>
 
+  <div class="field">
+    <%= form.label :grade %><br>
+    <%= form.text_field :grade, id: :product_grade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_area :price, id: :product_price %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
