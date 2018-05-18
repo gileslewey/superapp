@@ -1,5 +1,5 @@
 <%#= form_with(model: product, local: true) do |form| %>
-<%= form_for(@product) do |f| %>
+<%= form_for(@product) do |f| %
   <% if product.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
@@ -13,31 +13,31 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :product_name %>
+    <%= form.label :name, class: 'formLabel' %>
+    <%= form.text_field :name, class: 'formField' %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :product_description %>
+    <%= form.label :description, class: 'formLabel' %>
+    <%= form.text_area :description, id:, class: 'formField' %>
   </div>
 
   <div class="field">
-    <%= form.label :image_url %>
-    <%= form.text_field :image_url, id: :product_image_url %>
+    <%= form.label :image_url, class: 'formLabel' %>
+    <%= form.text_field :image_url, id:, class: 'formField' %>
   </div>
 
   <div class="field">
-    <%= form.label :grade %><br>
-    <%= form.text_field :grade, id: :product_grade %>
+    <%= form.label :grade, class: 'formLabel' %><br>
+    <%= form.text_field :grade, id:, class: 'formField' %>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
-    <%= form.text_area :price, id: :product_price %>
+    <%= form.label :price, class: 'formLabel' %>
+    <%= form.text_area :price, id:, class: 'formField' %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions submit-btn">
+    <%= form.submit class: 'btn btn-small' %>
   </div>
 <% end %>
