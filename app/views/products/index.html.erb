@@ -1,30 +1,31 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Products</h1><br>
-<table>
 
 
-  <tbody>
+
+
     <%= @products.each do |product| %>
-      <tr>
+    <div>
+       <%= link_to 'New Product', new_product_path, class: 'btn btn-info' %>
+     </div>
 
 
-      </tr>
+
+
     <% end %>
-  </tbody>
-</table>
 
 
-<div class="container-fluid">
-  <div class="row">
+
+
+<div class="row">
     <%# @products.each do |product| %>
       <%= render @products %>
     <%# end %>
-  </div>
 </div>
 <br>
-<% @products.each do |product| %>
-  <div class="col-sm-2 col-md-4">
+<%# @products.each do |product| %>
+  <!--<div class="col-sm-2 col-md-4">
     <%= image_tag(product.image_url, class: "img-responsive") %>
     <a href="#"><h1><%= product.name %></h1></a>
     <p><%= product.description %></p>
@@ -35,8 +36,5 @@
     <td><%= link_to 'Edit', edit_product_path(product) %></td>
     <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <td><%= link_to 'New Product', new_product_path %></td>
-  </div><!-- /col -->
-<% end %>
-
-
-</div>
+  </div>--><!-- /col -->
+<%# end %>
