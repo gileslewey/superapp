@@ -6,5 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Order.create(user_id: 1, product_id: 1, total: 10.0)
-Order.create(user_id: 1, product_id: 2, total: 5.0)
+  Product.create(name: "1929 Indian Head Nickle", description:
+    "Denver Minted", Image url: "indian.jpg", Grade: "Uncirculated", Price: "49")
+
+  Product.create(name: "1879 Morgan Silver Dollar", description:
+    "Carson City minted", Image url: "morgan.jpg", Grade: "Uncirculated", Price: "70")
+
+  Product.create(name: "1955 Double Die Cent", description:
+    "Philadelphia Minted", Image url: "ddpenny.jpg", Grade: "Very Good", Price: "700")
