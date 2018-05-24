@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
   Product.create(name: "1929 Indian Head Nickle", description:
-    "Denver Minted", Image url: "indian.jpg", Grade: "Uncirculated", Price: "49")
+    "Denver Minted", image_url: "indian.jpg", Grade: "Uncirculated", Price: "49")
 
   Product.create(name: "1879 Morgan Silver Dollar", description:
-    "Carson City minted", Image url: "morgan.jpg", Grade: "Uncirculated", Price: "70")
+    "Carson City minted", image_url: "morgan.jpg", Grade: "Uncirculated", Price: "70")
 
   Product.create(name: "1955 Double Die Cent", description:
-    "Philadelphia Minted", Image url: "ddpenny.jpg", Grade: "Very Good", Price: "700")
+    "Philadelphia Minted", image_url: "ddpenny.jpg", Grade: "Very Good", Price: "700")
