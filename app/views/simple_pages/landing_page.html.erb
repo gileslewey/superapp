@@ -1,5 +1,5 @@
 
-<h2>Featured Product:</h2>
+<h2>Hobo Nickle Coins</h2>
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -18,23 +18,15 @@
       <% @products.each do |product| %>
       <div class="item<%= " active" if product == @products.first %>">
         <% if product.image_url %>
-                  <%= image_tag(product.image_url, class: "img-responsive") %>
-                <% end %>
-        <div class="carousel-caption">
-          <%= product.name %>
-        </div>
+          <%= image_tag(product.image_url, class: "img-responsive coin-image") %>
+        <% end %>
+      <div class="carousel-caption">
+        <%= product.name %>
+      </div>
       </div>
       <% end %>
-    </div>
+  </div>
 
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+
 </div>

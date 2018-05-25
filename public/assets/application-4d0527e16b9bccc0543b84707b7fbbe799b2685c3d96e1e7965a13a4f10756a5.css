@@ -124,7 +124,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #e3f2fd;
+  background-color: whitesmoke;
 }
 
 /* line 30, /Users/DesertRaba/superapp/app/assets/stylesheets/simple_pages.scss */
@@ -146,7 +146,7 @@ li a:hover {
 }
 
 /* line 44, /Users/DesertRaba/superapp/app/assets/stylesheets/simple_pages.scss */
-.bike-image {
+.coin-image {
   display: block;
   margin-left: auto;
   margin-right: auto;

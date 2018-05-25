@@ -5,12 +5,14 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  color: midnightblue;
 }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  color: midnightblue;
 }
 
 pre {
@@ -23,11 +25,11 @@ a {
   color: #000;
 
   &:visited {
-    color: #666;
+    color: midnightblue;
   }
 
   &:hover {
-    color: #fff;
+    color: #midnightblue;
     background-color: #000;
   }
 }
