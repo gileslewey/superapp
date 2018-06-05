@@ -10,7 +10,7 @@
   
   Order.create(user_id: 1, product_id: 2, total: 5.0)
 
-  Product.create(name: "1929 Indian Head Nickle", description: "Denver Minted", image_url: "indian.jpg", quality: "Uncirculated", price: "49")
+  Product.create(name: "1929 Indian Head nickel", description: "Denver Minted", image_url: "indian.jpg", quality: "Uncirculated", price: "49")
 
   Product.create(name: "1879 Morgan Silver Dollar", description: "Carson City minted", image_url: "morgan.jpg", quality: "Uncirculated", price: "70")
 
