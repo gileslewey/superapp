@@ -18,6 +18,7 @@
             <li class="hobo"><strong>Hobo Nickel Coins</strong></li>
           </div>
           <div class="col-md-8">
+<!--ul removed-->
 
              <li><%= link_to "Home", root_path %></li>
              <li><%= link_to "About", simple_pages_about_path %></li>
@@ -29,10 +30,19 @@
                <%= submit_tag("Search", class: 'btn btn-danger') %>
              <% end %></li>
 
+          <ul class="nav pull-right">
+            <li>
+            <% if user_signed_in? %>
+              <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+            <% else %>
+              <%= link_to('Login', new_user_session_path) %>
+            <% end %>
+            </li>
+          </ul>
           </div>
        </div>
      </nav>
-
+<p class="notice"><%= notice %></p>
     <%= yield %>
 
     <footer class="navbar-default navbar-fixed-bottom" style="background-color: whitesmoke;">
