@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+ .hobo {
+   display: block;
+   font-family: 'Shadows Into Light', cursive;
+   text-align: left;
+   padding: 14px 16px;
+   text-decoration: none;
+   color: whitesmoke;
+ }
+ li {
+    display:inline-block;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.8em;
+}
+
+li a {
+    display: block;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+li a:hover {
+    background-color: whitesmoke;
+    text-decoration: none;
+    color: #4286f4;
+}

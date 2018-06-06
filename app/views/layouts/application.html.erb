@@ -3,28 +3,30 @@
   <head>
     <title>Superapp</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-
-        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <%= csrf_meta_tags %>
   </head>
 
+      <nav class="navbar navbar-dark bg-primary">
+        <div class="row">
+          <div class="col-md-6">
+            <li class="hobo"><strong>Hobo Nickel Coins</strong></li>
+          </div>
+          <div class="col-md-6">
 
+             <li><%= link_to "Home", root_path %></li>
+             <li><%= link_to "About", simple_pages_about_path %></li>
+             <li><%= link_to "Contact", simple_pages_contact_path %></li>
+             <li><%= link_to "Products", products_path %></li>
 
-  <body>
-    <div class="page-wrap">
-      <nav class="navbar" style="background-color: whitesmoke;">
-        <ul>
-         <li><%= link_to "Home", root_path %></li>
-         <li><%= link_to "About", simple_pages_about_path %></li>
-         <li><%= link_to "Contact", simple_pages_contact_path %></li>
-         <li><%= link_to "Products", products_path %></li>
-        </ul>
-      </nav>
-    </div>
+          </div>
+       </div>
+     </nav>
 
     <%= yield %>
 

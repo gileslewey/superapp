@@ -7,34 +7,7 @@ body {
   line-height: 18px;
 }
 
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-  color: midnightblue;
-}
-h5 {
-  color: red;
-}
 
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
-
-a {
-  color: #000;
-
-  &:visited {
-    color: midnightblue;
-  }
-
-  &:hover {
-    color: #midnightblue;
-    background-color: #000;
-  }
-}
 
 th {
   padding-bottom: 5px;
