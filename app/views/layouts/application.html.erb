@@ -14,15 +14,20 @@
 
       <nav class="navbar navbar-dark bg-primary">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-4">
             <li class="hobo"><strong>Hobo Nickel Coins</strong></li>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-8">
 
              <li><%= link_to "Home", root_path %></li>
              <li><%= link_to "About", simple_pages_about_path %></li>
              <li><%= link_to "Contact", simple_pages_contact_path %></li>
              <li><%= link_to "Products", products_path %></li>
+             <li><%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+               <%= form.label :q, 'Search for:' %>
+               <%= form.text_field :q, id: 'q', value: params[:q] %>
+               <%= form.submit 'Search' %>
+             <% end %></li>
 
           </div>
        </div>
