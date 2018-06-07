@@ -42,7 +42,13 @@
           </div>
        </div>
      </nav>
-<p class="notice"><%= notice %></p>
+     <!-- Flash Notice Tags -->
+         <% if notice %>
+           <div id="notice" class="alert alert-warning"><%= notice %></div>
+         <% end %>
+         <% if alert %>
+           <div id="alert" class="alert alert-danger"><%= alert %></div>
+         <% end %>
     <%= yield %>
 
     <footer class="navbar-default navbar-fixed-bottom" style="background-color: whitesmoke;">
