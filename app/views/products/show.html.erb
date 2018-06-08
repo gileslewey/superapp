@@ -25,5 +25,9 @@
   <strong>Price:</strong>
   <%= @product.price %>
 </p>
+<p>
+  <strong>Add a review:</strong>
+  <%= render 'new_comment' %>
+  <%= @product.highest_rating_comment %>
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
