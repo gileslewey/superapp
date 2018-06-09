@@ -11,32 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :product_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :product_description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image_url %>
-    <%= form.text_field :image_url, id: :product_image_url %>
-  </div>
-
-  <div class="field">
-    <%= form.label :quality %>
-    <%= form.text_field :colour, id: :quality %>
-  </div>
+  <div class="container col-sm-12 col-md-6 form-group">
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name, id: :product_name %>
+    </div>
 
     <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price, id: :price %>
-  </div>
+      <%= form.label :description %>
+      <%= form.text_area :description, id: :product_description %>
+    </div>
 
-  <div class="actions submit-btn">
-    <%= form.submit class: 'btn btn-small' %>
-  </div>
+    <div class="productImage img-responsive">
+      <%= form.label :image_url %>
+      <%= form.file_field :image_url, id: :product_image_url %>
+    </div>
+
+    <div class="field">
+      <%= form.label :quality %>
+      <%= form.text_field :colour, id: :quality %>
+    </div>
+
+    <div class="field">
+      <%= form.label :price %>
+      <%= form.text_field :price, id: :price %>
+    </div>
+
+    <div class="actions submit-btn">
+      <%= form.submit class: 'btn btn-small' %>
+    </div>
 <% end %>
