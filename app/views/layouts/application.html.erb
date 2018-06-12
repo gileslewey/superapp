@@ -24,7 +24,7 @@
              <li><%= link_to "About", simple_pages_about_path, class: 'link-to-text-color' %></li>
              <li><%= link_to "Contact", simple_pages_contact_path, class: 'link-to-text-color' %></li>
              <li><%= link_to "Products", products_path, class: 'link-to-text-color'  %></li>
-             <li>
+             <li class: 'search-text-color'>
                <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
                <%= form.text_field :q, id: 'q', value: params[:q] %>
                <%= submit_tag("Search", class: 'btn btn-info') %>

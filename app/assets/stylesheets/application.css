@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ #q {
+    color: red;
+ }
  .hobo {
    display: block;
    font-family: 'Shadows Into Light', cursive;
@@ -35,7 +38,9 @@
 a.link-to-text-color {
 color: whitesmoke;
 }
-
+.search-text-color {
+  color: red;
+}
 li a:hover {
     background-color: whitesmoke;
     text-decoration: none;
