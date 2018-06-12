@@ -13,7 +13,7 @@
   <%= csrf_meta_tags %>
   </head>
 
-      <nav class="navbar bg-primary">
+      <nav class="navbar">
         <div class="row nav-display">
           <div class="col-md-4">
             <li class="hobo"><strong>Hobo Nickel Coins</strong></li>
@@ -24,17 +24,17 @@
              <li><%= link_to "About", simple_pages_about_path, class: 'link-to-text-color' %></li>
              <li><%= link_to "Contact", simple_pages_contact_path, class: 'link-to-text-color' %></li>
              <li><%= link_to "Products", products_path, class: 'link-to-text-color'  %></li>
-             <li class: 'search-text-color'>
+             <li>
                <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
                <%= form.text_field :q, id: 'q', value: params[:q] %>
-               <%= submit_tag("Search", class: 'btn btn-info') %>
+               <%= submit_tag("Search", class: 'btn btn-search') %>
              <% end %></li>
              <div class="pull-right">
                <li>
                <% if user_signed_in? %>
                  <%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'btn btn-success' ) %>
                <% else %>
-                 <%= link_to('Login', new_user_session_path, class: 'btn btn-success') %>
+                 <%= link_to('Login', new_user_session_path, class: 'btn btn-login') %>
                <% end %>
                </li>
              </div>
@@ -51,9 +51,9 @@
          <% end %>
     <%= yield %>
 
-    <footer class="navbar-default navbar-fixed-bottom" style="background-color: whitesmoke;">
+    <footer class="navbar-default navbar-fixed-bottom" style="background-color: #FBEFB9;">
       <div class="container-fluid">
-        <span class="text-muted" style="color: steelblue;">&copy; 2018 Giles Lewey</span>
+        <span class="text-muted" style="color: #6F2D2E;">&copy; 2018 Giles Lewey</span>
       </div>
     </footer>
   </body>
