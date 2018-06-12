@@ -49,8 +49,8 @@ li a:hover {
 .form-group {
   margin-bottom: 0px;
 }
-a:visited {
-  color:whitesmoke;
+/*a:visited {
+  color:whitesmoke;*/
 }
 #q {
   border-radius: 1rem;
