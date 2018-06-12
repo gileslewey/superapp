@@ -1,7 +1,7 @@
 
-<h2>Hobo nickel Coins</h2>
 
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+<div id="carousel-example-generic" class="carousel slide top-margin" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <% @products.each_with_index do |product, index| %>
@@ -9,14 +9,13 @@
     <% end %>
   </ol>
   <!-- Wrapper for slides -->
-
     <div class="carousel-inner" role="listbox">
       <% @products.each do |product| %>
       <div class="item<%= " active" if product == @products.first %>">
         <% if product.image_url %>
           <%= image_tag(product.image_url, class: "img-responsive coin-image") %>
         <% end %>
-      <div class="carousel-caption">
+      <div class="carousel-caption caption-orange">
         <%= product.name %>
       </div>
       </div>

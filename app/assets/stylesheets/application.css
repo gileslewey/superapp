@@ -20,23 +20,33 @@
    padding: 14px 16px;
    text-decoration: none;
    color: whitesmoke;
+   font-size: 240%;
+ }
+ .nav-display {
+   display:inline;
  }
  li {
-    display:inline-block;
     font-family: 'Shadows Into Light', cursive;
     font-size: 1.8em;
-}
-
-li a {
-    display: block;
-    text-align: right;
-    padding: 14px 16px;
-    text-decoration: none;
     color: whitesmoke;
+}
+.navbar {min-height: 80px;}
+
+a.link-to-text-color {
+color: whitesmoke;
 }
 
 li a:hover {
     background-color: whitesmoke;
     text-decoration: none;
     color: #4286f4;
+}
+.form-group {
+  margin-bottom: 0px;
+}
+a:visited {
+  color:whitesmoke;
+}
+#q {
+  border-radius: 1rem;
 }

@@ -7,11 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
   Order.create(user_id: 1, product_id: 1, total: 10.0)
-  
+
   Order.create(user_id: 1, product_id: 2, total: 5.0)
 
-  Product.create(name: "1929 Indian Head nickel", description: "Denver Minted", image_url: "indian.jpg", quality: "Uncirculated", price: "49")
+  Product.create(name: "Seth Batista Carving", description: "Hand Carved Buffalo Nickel coin human SKULL - Hobo nickel by Seth Basista", image_url: "skullindian.jpg", quality: "New", price: "95")
 
-  Product.create(name: "1879 Morgan Silver Dollar", description: "Carson City minted", image_url: "morgan.jpg", quality: "Uncirculated", price: "70")
+  Product.create(name: "Steampunk Carving", description: "Hand carved by Alexey Saburov", image_url: "steampunk.jpg", quality: "New", price: "95")
 
-  Product.create(name: "1955 Double Die Cent", description: "Philadelphia Minted", image_url: "ddpenny.jpg", quality: "Very Good", price: "700")
+  Product.create(name: "Bo Hughes Original", description: "Depressian-era carving by Bo Hughes", image_url: "bohughes.jpg", quality: "Very Good", price: "6000")
+
+  Product.create(name: "Bert Original", description: "Old hobo nickel carving by Bert Weigrand", image_url: "bertweigrand.jpg", quality: "Uncirculated", price: "3000")

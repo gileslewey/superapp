@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   has_many :comments
+  validates :name, presence: true
 
 public
   def self.search(search_term)
@@ -13,5 +14,6 @@ public
   def average_rating
   comments.average(:rating).to_f
   end
+
 
 end
