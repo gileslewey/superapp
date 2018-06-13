@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
   has_many :comments
   validates :name, presence: true
-
+#wasn't working on Heroku without public, not sure why??
 public
   def self.search(search_term)
     Product.where("name LIKE ?", "%#{search_term}%")

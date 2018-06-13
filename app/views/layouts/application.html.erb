@@ -16,13 +16,12 @@
       <nav class="navbar">
         <div class="row nav-display">
           <div class="col-md-4">
-            <a class="navbar-brand" href="#">
-              <img src="hobologo1.jpg" width="30" height="30" alt="hobo">
-            </a>
+          <a href="#" class="navbar-left hobo-nav">
+              <%= image_tag("hobologo1.png", class: "hobo-size") %>
+          </a>
             <li class="hobo"><strong>Hobo Nickel Coins</strong></li>
           </div>
           <div class="col-md-8">
-
             <div class="form-group">
              <li><%= link_to "Home", root_path, class: 'link-to-text-color' %></li>
              <li><%= link_to "About", simple_pages_about_path, class: 'link-to-text-color' %></li>
