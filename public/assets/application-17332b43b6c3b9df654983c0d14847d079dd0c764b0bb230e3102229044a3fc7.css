@@ -1,0 +1,344 @@
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  font-size: 2em;
+}
+
+@font-face {
+  font-family: "raty";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./fonts/raty.eot");
+  src: url("./fonts/raty.eot?#iefix") format("embedded-opentype");
+  src: url("./fonts/raty.svg#raty") format("svg");
+  src: url("./fonts/raty.ttf") format("truetype");
+  src: url("./fonts/raty.woff") format("woff");
+}
+
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "raty";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+.cancel-on-png:before {
+  content: "\e600";
+}
+
+.cancel-off-png:before {
+  content: "\e601";
+}
+
+.star-on-png:before {
+  content: "\f005";
+}
+
+.star-off-png:before {
+  content: "\f006";
+}
+
+.star-half-png:before {
+  content: "\f123";
+}
+/* line 4, /Users/DesertRaba/superapp/app/assets/stylesheets/products.scss */
+.coin-padding {
+  padding: 2% 0;
+}
+
+/* line 7, /Users/DesertRaba/superapp/app/assets/stylesheets/products.scss */
+.productWrapper {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+/* line 13, /Users/DesertRaba/superapp/app/assets/stylesheets/products.scss */
+h4 {
+  color: midnightblue;
+}
+
+/* line 16, /Users/DesertRaba/superapp/app/assets/stylesheets/products.scss */
+h5 {
+  color: red;
+}
+/* line 1, /Users/DesertRaba/superapp/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 10, /Users/DesertRaba/superapp/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 16, /Users/DesertRaba/superapp/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 22, /Users/DesertRaba/superapp/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 25, /Users/DesertRaba/superapp/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 29, /Users/DesertRaba/superapp/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /Users/DesertRaba/superapp/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 39, /Users/DesertRaba/superapp/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 44, /Users/DesertRaba/superapp/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 49, /Users/DesertRaba/superapp/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 53, /Users/DesertRaba/superapp/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 59, /Users/DesertRaba/superapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 66, /Users/DesertRaba/superapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 76, /Users/DesertRaba/superapp/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 82, /Users/DesertRaba/superapp/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/* line 4, /Users/DesertRaba/superapp/app/assets/stylesheets/simple_pages.scss */
+h1 {
+  font-size: 2em;
+  font-family: "arial";
+  text-align: center;
+}
+
+/* line 9, /Users/DesertRaba/superapp/app/assets/stylesheets/simple_pages.scss */
+h2 {
+  text-align: center;
+  padding: 2%;
+}
+
+/* line 13, /Users/DesertRaba/superapp/app/assets/stylesheets/simple_pages.scss */
+h3 {
+  padding: 10%;
+}
+
+/* line 16, /Users/DesertRaba/superapp/app/assets/stylesheets/simple_pages.scss */
+.form-wrapper {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 21, /Users/DesertRaba/superapp/app/assets/stylesheets/simple_pages.scss */
+.caption-orange {
+  color: black;
+}
+
+/* line 24, /Users/DesertRaba/superapp/app/assets/stylesheets/simple_pages.scss */
+* {
+  margin: 0;
+}
+
+/* line 27, /Users/DesertRaba/superapp/app/assets/stylesheets/simple_pages.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 31, /Users/DesertRaba/superapp/app/assets/stylesheets/simple_pages.scss */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* line 38, /Users/DesertRaba/superapp/app/assets/stylesheets/simple_pages.scss */
+li {
+  display: inline-block;
+}
+
+/* line 42, /Users/DesertRaba/superapp/app/assets/stylesheets/simple_pages.scss */
+li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* line 49, /Users/DesertRaba/superapp/app/assets/stylesheets/simple_pages.scss */
+li a:hover {
+  background-color: snow;
+  text-decoration: none;
+}
+
+/* line 53, /Users/DesertRaba/superapp/app/assets/stylesheets/simple_pages.scss */
+.coin-image {
+  margin-top: 5%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+/* line 60, /Users/DesertRaba/superapp/app/assets/stylesheets/simple_pages.scss */
+.carousel-control.left {
+  left: 30%;
+  background-image: none;
+}
+
+/* line 65, /Users/DesertRaba/superapp/app/assets/stylesheets/simple_pages.scss */
+.carousel-control.right {
+  right: 30%;
+  background-image: none;
+}
+
+/* line 70, /Users/DesertRaba/superapp/app/assets/stylesheets/simple_pages.scss */
+.carousel-control.left:hover, .carousel-control.right:hover {
+  background-color: transparent;
+}
+
+/* line 73, /Users/DesertRaba/superapp/app/assets/stylesheets/simple_pages.scss */
+.glyphicon-chevron-left {
+  color: #B5B6B5;
+}
+
+/* line 76, /Users/DesertRaba/superapp/app/assets/stylesheets/simple_pages.scss */
+.glyphicon-chevron-right {
+  color: #B5B6B5;
+}
+
+/* line 79, /Users/DesertRaba/superapp/app/assets/stylesheets/simple_pages.scss */
+.carousel-caption {
+  position: relative;
+  left: auto;
+  right: auto;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+ body {
+   background-color: #FFFFFF;
+ }
+ #q {
+    color: black;
+    border-radius: 1rem;
+    font-family: 'Permanent Marker';
+ }
+ .hobo-nav {
+   max-height: 40px;
+ }
+ .hobo-size {
+height: 61px;
+ }
+ nav.navbar {
+   padding: 0px;
+ }
+ .navbar {
+   background-color: #6f2d2e;
+ }
+ .btn-login {
+   background-color: #EEA838;
+ }
+ .btn-search {
+   background-color: #B5B6B5;
+ }
+ .hobo {
+   display: block;
+   font-family: 'Shadows Into Light', cursive;
+   text-align: left;
+   padding: 14px 16px;
+   text-decoration: none;
+   color: whitesmoke;
+   font-size: 240%;
+ }
+ .nav-display {
+   display:inline;
+ }
+
+ li {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.8em;
+    color: whitesmoke;
+}
+a.link-to-text-color {
+color: whitesmoke;
+}
+li a:hover {
+    background-color: whitesmoke;
+    text-decoration: none;
+    color: #EEA838;
+}
+.form-group {
+  margin-bottom: 0px;
+}
+a:visited {
+  color:grey;
+}
