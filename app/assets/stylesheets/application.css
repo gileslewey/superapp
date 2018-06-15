@@ -19,6 +19,7 @@
  #q {
     color: black;
     border-radius: 1rem;
+    font-family: 'Permanent Marker';
  }
  .hobo-nav {
    max-height: 40px;
@@ -68,5 +69,5 @@ li a:hover {
   margin-bottom: 0px;
 }
 a:visited {
-  color:whitesmoke;
+  color:grey;
 }
