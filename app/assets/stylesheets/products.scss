@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .coin-padding {
-  padding: 2% 0;
+  padding: 3%;
 }
 .productWrapper {
   display: block;
@@ -11,8 +11,19 @@
   width: 90%;
 }
 h4 {
-  color: midnightblue;
+  color: #6f2d2e;
 }
 h5 {
   color: red;
+}
+.img-constrain {
+  max-width: 200px;
+}
+.btn-login {
+  background-color: #75DBCD;
+  color: black;
+  font-family: 'Shadows Into Light'
+}
+ .btn-login a:visited{
+  color: black;
 }

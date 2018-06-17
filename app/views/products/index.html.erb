@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<br>
 
-<div class="container">
+<section class="container-fluid">
   <div class="row">
+
     <%= render @products %>
-  </div><!--end row-->
-</div><!--end container-->
-  <%= will_paginate @products %>
+
+  </div>
+</section>
+<%= will_paginate @products %>
 <br>
-<button type="button" class="btn btn-primary"><%= link_to 'New Product', new_product_path %></button>
+<button type="button" class="btn btn-login"><%= link_to 'New Product', new_product_path %></button>

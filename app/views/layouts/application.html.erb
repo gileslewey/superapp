@@ -15,37 +15,44 @@
 
       <nav class="navbar">
         <div class="row nav-display">
-          <div class="col-md-4">
+          <div class="col-sm-12 col-md-4">
           <a href="#" class="navbar-left hobo-nav">
               <%= image_tag("hobologo1.png", class: "hobo-size") %>
           </a>
-            <li class="hobo"><strong>Hobo Nickel Coins</strong></li>
-          </div>
-          <div class="col-md-8">
+            <li class="hobo"><strong>Hobo <span class="span-green">Nickel</span> <span class="span-blue">Coins</span></strong></li>
+          </div><!--end-col-->
+          <div class="col-sm-12 col-md-4">
             <div class="form-group">
-             <li><%= link_to "Home", root_path, class: 'link-to-text-color' %></li>
-             <li><%= link_to "About", simple_pages_about_path, class: 'link-to-text-color' %></li>
-             <li><%= link_to "Contact", simple_pages_contact_path, class: 'link-to-text-color' %></li>
-             <li><%= link_to "Products", products_path, class: 'link-to-text-color'  %></li>
-             <li>
-               <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
-               <%= form.text_field :q, id: 'q', value: params[:q] %>
-               <%= submit_tag("Search", class: 'btn btn-search') %>
-             <% end %></li>
-             <div class="pull-right">
-               <li>
-               <% if user_signed_in? %>
+              <ul>
+                 <li><%= link_to "Home", root_path, class: 'link-to-text-color' %></li>
+                 <li><%= link_to "About", simple_pages_about_path, class: 'link-to-text-color' %></li>
+                 <li><%= link_to "Contact", simple_pages_contact_path, class: 'link-to-text-color' %></li>
+                 <li><%= link_to "Products", products_path, class: 'link-to-text-color'  %></li>
+               </ul>
+            </div><!--end-form-->
+          </div><!--end col-->
+          <div class="col-sm-12 col-md-4">
+            <div class="form-group">
+              <ul>
+                 <li>
+                 <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+                 <%= form.text_field :q, id: 'q', value: params[:q] %>
+                 <%= submit_tag("Search", class: 'btn btn-search') %>
+                 <% end %>
+                 </li>
+                 <li>
+                 <% if user_signed_in? %>
                  <%= link_to('Logout', destroy_user_session_path, method: :delete, class: 'btn btn-success' ) %>
-               <% else %>
+                 <% else %>
                  <%= link_to('Login', new_user_session_path, class: 'btn btn-login') %>
-               <% end %>
-               </li>
-             </div>
-          </div>
-     </div>
-     </nav>
+                 <% end %>
+                 </li>
+               </ul>
+             </div><!--end-form-->
+           </div><!--end-col-->
+         </div><!--end-row-->
+       </nav>
      <!-- Flash Notice Tags -->
-     <!--getting a double destroy-->
          <% if notice %>
            <div id="notice" class="alert alert-warning"><%= notice %></div>
          <% end %>
@@ -54,7 +61,7 @@
          <% end %>
     <%= yield %>
     <br><br><br><br>
-    <footer class="navbar-default navbar-fixed-bottom" style="background-color: #FBEFB9;">
+    <footer class="navbar-default navbar-fixed-bottom" style="background-color: #75DBCD;">
       <div class="container-fluid">
         <span class="text-muted" style="color: #6F2D2E;">&copy; 2018 Giles Lewey</span>
       </div>

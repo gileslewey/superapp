@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
  body {
    background-color: #FFFFFF;
  }
@@ -25,19 +26,28 @@
    max-height: 40px;
  }
  .hobo-size {
-height: 61px;
+   height: 61px;
  }
- nav.navbar {
+  nav.navbar {
    padding: 0px;
  }
  .navbar {
    background-color: #6f2d2e;
  }
- .btn-login {
-   background-color: #EEA838;
+ li .btn-login {
+   background-color: #75DBCD;
+   color: black;
  }
- .btn-search {
-   background-color: #B5B6B5;
+ li .btn-search {
+   background-color: #85CB33;
+   color: black;
+ }
+ li .btn-search:hover {
+   color: whitesmoke;
+ }
+ li .btn-login:hover {
+   color: whitesmoke;
+   background-color: #75DBCD;
  }
  .hobo {
    display: block;
@@ -51,14 +61,19 @@ height: 61px;
  .nav-display {
    display:inline;
  }
-
- li {
+.span-blue {
+   color: #75DBCD;
+}
+.span-green {
+   color: #85CB33;
+}
+li {
     font-family: 'Shadows Into Light', cursive;
     font-size: 1.8em;
     color: whitesmoke;
 }
 a.link-to-text-color {
-color: whitesmoke;
+    color: whitesmoke;
 }
 li a:hover {
     background-color: whitesmoke;
@@ -66,8 +81,8 @@ li a:hover {
     color: #EEA838;
 }
 .form-group {
-  margin-bottom: 0px;
+   margin-bottom: 0px;
 }
-a:visited {
-  color:grey;
+nav a:visited {
+   color:none;
 }
