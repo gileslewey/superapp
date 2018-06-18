@@ -4,8 +4,8 @@
     <title>Superapp</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -15,10 +15,12 @@
 
       <nav class="navbar">
         <div class="row nav-display">
-          <div class="col-sm-12 col-md-4">
+          <div class="col-sm-6 col-md-3">
           <a href="#" class="navbar-left hobo-nav">
               <%= image_tag("hobologo1.png", class: "hobo-size") %>
           </a>
+        </div><!--end col-->
+            <div class="col-sm-6 col-md-3">
             <li class="hobo"><strong>Hobo <span class="span-green">Nickel</span> <span class="span-blue">Coins</span></strong></li>
           </div><!--end-col-->
           <div class="col-sm-12 col-md-4">

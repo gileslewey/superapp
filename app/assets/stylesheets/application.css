@@ -20,42 +20,61 @@
  #q {
     color: black;
     border-radius: 1rem;
-    font-family: 'Permanent Marker';
+    font-family: 'Fira Sans', sans-serif;
  }
- .hobo-nav {
-   max-height: 40px;
- }
+
  .hobo-size {
    height: 61px;
  }
-  nav.navbar {
-   padding: 0px;
+ nav a:visited {
+    color:none;
  }
  .navbar {
    background-color: #6f2d2e;
+   padding: 0px;
  }
  li .btn-login {
    background-color: #75DBCD;
    color: black;
+   font-family: 'Shadows Into Light Two'
+   font-weight: bold;
+
  }
  li .btn-search {
    background-color: #85CB33;
    color: black;
+   font-family: 'Shadows Into Light Two'
+   font-weight: 300;
  }
  li .btn-search:hover {
    color: whitesmoke;
+   font-family: 'Shadows Into Light Two'
+
  }
  li .btn-login:hover {
    color: whitesmoke;
    background-color: #75DBCD;
+   font-family: 'Shadows Into Light Two'
+
+ }
+ li {
+     font-family: 'Shadows Into Light', cursive;
+     font-size: 1.8em;
+     color: whitesmoke;
+        padding: 14px 0px;
+ }
+ a.link-to-text-color {
+     color: whitesmoke;
+
+ }
+ li a:hover {
+     color: #EEA838;
  }
  .hobo {
-   display: block;
+   display: inline-block;
    font-family: 'Shadows Into Light', cursive;
    text-align: left;
-   padding: 14px 16px;
    text-decoration: none;
-   color: whitesmoke;
    font-size: 240%;
  }
  .nav-display {
@@ -67,22 +86,7 @@
 .span-green {
    color: #85CB33;
 }
-li {
-    font-family: 'Shadows Into Light', cursive;
-    font-size: 1.8em;
-    color: whitesmoke;
-}
-a.link-to-text-color {
-    color: whitesmoke;
-}
-li a:hover {
-    background-color: whitesmoke;
-    text-decoration: none;
-    color: #EEA838;
-}
+
 .form-group {
    margin-bottom: 0px;
-}
-nav a:visited {
-   color:none;
 }
