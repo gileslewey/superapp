@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-
+  before_action :authenticate_user!, except: [:show, :index]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :must_be_admin, only: [:new, :create, :index]
   load_and_authorize_resource
 
   # GET /users
@@ -64,14 +64,20 @@ class UsersController < ApplicationController
     end
   end
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
     end
-
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:first_name, :last_name)
+    end
+
+    def must_be_admin
+      if !current_user.admin?
+        redirect_to(root_path, :alert => "Admin access needed to access the page") and return
+      end
     end
 end

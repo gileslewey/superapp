@@ -1,3 +1,4 @@
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -12,81 +13,179 @@
  *
  *= require_tree .
  *= require_self
+ *= require jquery.raty
  */
+ nav ul li {
+     display: inline-block;
+     vertical-align: middle;
+ }
+body {
+  background-color: #fff;
+  margin: 33px;
+  font-size: 16px;
+  line-height: 18px;
+}
 
- body {
-   background-color: #FFFFFF;
- }
- #q {
-    color: black;
-    border-radius: 1rem;
-    font-family: 'Fira Sans', sans-serif;
- }
+.navbar {
+  background-color: #6f2d2e;
+  font-family: 'Shadows Into Light', cursive;
+}
 
- .hobo-size {
-   height: 61px;
- }
- nav a:visited {
-    color:none;
- }
- .navbar {
-   background-color: #6f2d2e;
-   padding: 0px;
- }
- li .btn-login {
+a.link-to-text-color {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 24px;
+  color: whitesmoke;
+}
+
+.nav-space {
+  margin-left: 12%;
+}
+
+.header-margin {
+  margin: 0, 50px;
+}
+
+#q {
+   color: black;
+   border-radius: 1rem;
+   font-family: 'Fira Sans', sans-serif;
+}
+
+.hobo-image {
+ height: 78px;
+}
+
+.navbar-text {
+  font-family: 'Shadows Into Light', cursive;
+  text-align: left;
+  text-decoration: none;
+  font-size: 240%;
+}
+
+.btn-search {
+  background-color: #85CB33;
+  color: black;
+  font-family: 'Copse', serif;
+}
+
+.btn-search:hover {
+     background-color: #85CB33;
+  color: whitesmoke;
+  font-family: 'Copse', serif;
+}
+.btn-login {
    background-color: #75DBCD;
    color: black;
-   font-family: 'Shadows Into Light Two'
-   font-weight: bold;
+   font-family: 'Copse', serif;
+ }
+.btn-login:hover {
+   background-color: #75DBCD;
+   color: whitesmoke;
+   font-family: 'Copse', serif;
+ }
+.span-blue {
+   color: #75DBCD;
+}
 
+.span-orange {
+   color: #eea838;
+}
+
+.span-nickel {
+  color: whitesmoke;
+}
+
+/*
+a {
+  color: whitesmoke;
+
+  &:visited {
+    color: whitesmoke;
+  }
+
+  &:hover {
+    color: #EEA838;
+    background-color: none;
+  }
+}
+*/
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px -7px 0;
+    background-color: #c00;
+    color: #fff;
+  }
+
+/*
+nav a:visited {
+    color:none;
+ }
+nav {
+   max-height: 80px;
+ }
+
+li .login.btn-login {
+   background-color: #75DBCD;
+   color: black;
+   font-family: 'Copse', serif;
+ }
+li .login.btn-login:hover {
+      background-color: #75DBCD;
+   color: whitesmoke;
+   font-family: 'Copse', serif;
  }
  li .btn-search {
    background-color: #85CB33;
    color: black;
-   font-family: 'Shadows Into Light Two'
-   font-weight: 300;
+   font-family: 'Copse', serif;
+
  }
  li .btn-search:hover {
+      background-color: #85CB33;
    color: whitesmoke;
-   font-family: 'Shadows Into Light Two'
-
+   font-family: 'Copse', serif;
  }
- li .btn-login:hover {
-   color: whitesmoke;
-   background-color: #75DBCD;
-   font-family: 'Shadows Into Light Two'
-
+li a {
+  line-height: 50px;
  }
- li {
+li {
      font-family: 'Shadows Into Light', cursive;
      font-size: 1.8em;
      color: whitesmoke;
-        padding: 14px 0px;
+     line-height: 80px;
  }
  a.link-to-text-color {
      color: whitesmoke;
+     max-height: 80px;
 
  }
  li a:hover {
      color: #EEA838;
  }
- .hobo {
-   display: inline-block;
-   font-family: 'Shadows Into Light', cursive;
-   text-align: left;
-   text-decoration: none;
-   font-size: 240%;
- }
- .nav-display {
-   display:inline;
- }
-.span-blue {
-   color: #75DBCD;
-}
-.span-green {
-   color: #85CB33;
-}
+
+
 
 .form-group {
    margin-bottom: 0px;
 }
+*/

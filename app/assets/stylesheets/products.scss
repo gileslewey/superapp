@@ -19,11 +19,25 @@ h5 {
 .img-constrain {
   max-width: 200px;
 }
-.btn-login {
+
+li .btn-search {
+  background-color: #85CB33;
+  color: black;
+  font-family: 'Copse', serif;
+
+}
+li .btn-search:hover {
+     background-color: #85CB33;
+  color: whitesmoke;
+  font-family: 'Copse', serif;
+}
+li .btn-login {
   background-color: #75DBCD;
   color: black;
-  font-family: 'Shadows Into Light'
+  font-family: 'Copse', serif;
 }
- .btn-login a:visited{
-  color: black;
+li .btn-login:hover {
+     background-color: #75DBCD;
+  color: whitesmoke;
+  font-family: 'Copse', serif;
 }
