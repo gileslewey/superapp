@@ -34,7 +34,7 @@
       <li><%= link_to "Contact", simple_pages_contact_path, class: 'link-to-text-color' %></li>
       <li><%= link_to "Products", products_path, class: 'link-to-text-color' %></li>
     </ul>
-<div  class = "nav navbar-nav navbar-right" >
+<div  class = "nav navbar-nav navbar-right navblock-margin" >
   <ul>
       <li>
         <%= form_with(url: products_path, method: 'get', local: true, class: 'navbar-form navbar-right') do |form| %>
@@ -44,9 +44,9 @@
       </li>
       <% if current_user && current_user.admin? %>
       <li><%= link_to('Users', users_path) %></li>
-      <li><%= link_to('My Account', user_path(current_user)) %></li>
+         <li><%= link_to('Account', user_path(current_user)) %></li>
          <% elsif signed_in? %>
-      <li><%= link_to('My Account', user_path(current_user)) %></li>
+        <li><%= link_to('Account', user_path(current_user)) %></li>
          <% else %>
       <li><%= button_to "Sign up", new_user_registration_path,
        :class => "btn btn-login", :method => :get %></li>
