@@ -121,7 +121,7 @@ margin-right: 2%;
   color: whitesmoke;
 }
 
-/*
+
 a {
   color: whitesmoke;
 
@@ -134,7 +134,7 @@ a {
     background-color: none;
   }
 }
-*/
+
 #notice {
   color: green;
 }
@@ -161,57 +161,3 @@ a {
     background-color: #c00;
     color: #fff;
   }
-
-/*
-nav a:visited {
-    color:none;
- }
-nav {
-   max-height: 80px;
- }
-
-li .login.btn-login {
-   background-color: #75DBCD;
-   color: black;
-   font-family: 'Copse', serif;
- }
-li .login.btn-login:hover {
-      background-color: #75DBCD;
-   color: whitesmoke;
-   font-family: 'Copse', serif;
- }
- li .btn-search {
-   background-color: #85CB33;
-   color: black;
-   font-family: 'Copse', serif;
-
- }
- li .btn-search:hover {
-      background-color: #85CB33;
-   color: whitesmoke;
-   font-family: 'Copse', serif;
- }
-li a {
-  line-height: 50px;
- }
-li {
-     font-family: 'Shadows Into Light', cursive;
-     font-size: 1.8em;
-     color: whitesmoke;
-     line-height: 80px;
- }
- a.link-to-text-color {
-     color: whitesmoke;
-     max-height: 80px;
-
- }
- li a:hover {
-     color: #EEA838;
- }
-
-
-
-.form-group {
-   margin-bottom: 0px;
-}
-*/
