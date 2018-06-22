@@ -29,7 +29,7 @@
 
   <div class="field">
     <%= form.label :quality %>
-    <%= form.text_field :colour, id: :quality %>
+    <%= form.text_field :quality, id: :quality %>
   </div>
 
     <div class="field">

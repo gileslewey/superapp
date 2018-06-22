@@ -47,16 +47,15 @@
          <li><%= link_to('Account', user_path(current_user)) %></li>
          <% elsif signed_in? %>
         <li><%= link_to('Account', user_path(current_user)) %></li>
-         <% else %>
-      <li><%= button_to "Sign up", new_user_registration_path,
-       :class => "btn btn-login", :method => :get %></li>
-         <% end %>
-      <% if user_signed_in? %>
-      <li><%= button_to "Logout", destroy_user_session_path, method: :delete,
-       :class => "btn btn-login", :method => :get %></li>
-      <% else %>
-      <li><%= button_to "Login", new_user_session_path, method: :delete,
-       :class => "btn btn-login", :method => :get %> </li>   <% end %>
+        <% else %>
+          <li><%= link_to('Sign up', new_user_registration_path) %></li>
+        <% end %>
+
+          <% if user_signed_in? %>
+        <li><%= link_to('Logout', destroy_user_session_path, method: :delete)%></li>
+          <% else %>
+        </li><%= link_to('Login', new_user_session_path)%></li>
+<% end %>
 </ul>
 </div><!--end nav div-->
   </div><!--end container-fluid-->
