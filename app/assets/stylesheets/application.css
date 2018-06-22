@@ -121,7 +121,7 @@ margin-right: 2%;
   color: whitesmoke;
 }
 
-
+/*
 a {
   color: whitesmoke;
 
@@ -134,7 +134,7 @@ a {
     background-color: none;
   }
 }
-
+*/
 #notice {
   color: green;
 }
@@ -161,3 +161,4 @@ a {
     background-color: #c00;
     color: #fff;
   }
+}
