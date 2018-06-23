@@ -23,6 +23,34 @@
      vertical-align: middle;
  }
 
+a {
+  color:white;
+}
+nav .navbarCollapse ul li a {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 24px;
+  color: whitesmoke;
+}
+
+nav .navbarCollapse ul li.sidebar a {
+  font-size: 16px;
+  font-family: 'Copse', serif;
+  color: #eea838;
+}
+
+nav .navbarCollapse ul li a:hover {
+  background-color: #6f2d2e;
+  color: #eea838;
+  font-size: 26px;
+}
+
+nav .navbarCollapse ul li.sidebar a:hover {
+  background-color: #6f2d2e;
+    font-family: 'Copse', serif;
+  font-size: 16px;
+  color: whitesmoke;
+}
+
 body {
   background-color: #fff;
   margin: 33px;
@@ -33,12 +61,6 @@ body {
 .navbar {
   background-color: #6f2d2e;
   font-family: 'Shadows Into Light', cursive;
-}
-
-a.link-to-text-color {
-  font-family: 'Shadows Into Light', cursive;
-  font-size: 24px;
-  color: whitesmoke;
 }
 
 .nav-space {
@@ -79,7 +101,7 @@ margin-right: 2%;
   color: whitesmoke;
   font-family: 'Copse', serif;
 }
-.btn-login {
+/* .btn-login {
    background-color: #75DBCD;
    color: black;
    font-family: 'Copse', serif;
@@ -108,7 +130,7 @@ margin-right: 2%;
      background-color: #75DBCD;
      color: whitesmoke;
      font-family: 'Copse', serif;
-   }
+   }*/
 .span-blue {
    color: #75DBCD;
 }
@@ -121,20 +143,13 @@ margin-right: 2%;
   color: whitesmoke;
 }
 
-/*
-a {
-  color: whitesmoke;
 
-  &:visited {
-    color: whitesmoke;
-  }
-
-  &:hover {
-    color: #EEA838;
-    background-color: none;
-  }
+a:hover {
+  color: #75DBCD;
 }
-*/
+a:visited {
+  color: black;
+}
 #notice {
   color: green;
 }

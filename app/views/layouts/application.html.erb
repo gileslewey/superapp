@@ -14,7 +14,7 @@
   </head>
 
 <body>
-  <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+  <nav class="navbar navbar-fixed-top" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbarCollapse">
@@ -29,32 +29,32 @@
 
     <div class="collapse navbar-collapse navbarCollapse">
     <ul class="nav navbar-nav nav-space">
-      <li><%= link_to "Home", root_path, class: 'link-to-text-color' %></li>
-      <li><%= link_to "About", simple_pages_about_path, class: 'link-to-text-color' %></li>
-      <li><%= link_to "Contact", simple_pages_contact_path, class: 'link-to-text-color' %></li>
-      <li><%= link_to "Products", products_path, class: 'link-to-text-color' %></li>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "About", simple_pages_about_path %></li>
+      <li><%= link_to "Contact", simple_pages_contact_path %></li>
+      <li><%= link_to "Products", products_path %></li>
     </ul>
 <div  class = "nav navbar-nav navbar-right navblock-margin" >
   <ul>
-      <li>
+      <li class="sidebar">
         <%= form_with(url: products_path, method: 'get', local: true, class: 'navbar-form navbar-right') do |form| %>
           <%= form.text_field :q, id: 'q', value: params[:q], type: 'text', class: 'form-control', placeholder: 'search text' %>
           <%= submit_tag("Search", class: 'btn btn-search') %>
         <% end %>
       </li>
       <% if current_user && current_user.admin? %>
-      <li><%= link_to('Users', users_path) %></li>
-         <li><%= link_to('Account', user_path(current_user)) %></li>
+      <li class="sidebar"><%= link_to('Users', users_path) %></li>
+         <li class="sidebar"><%= link_to('Account', user_path(current_user)) %></li>
          <% elsif signed_in? %>
-        <li><%= link_to('Account', user_path(current_user)) %></li>
+        <li class="sidebar"><%= link_to('Account', user_path(current_user)) %></li>
         <% else %>
-          <li><%= link_to('Sign up', new_user_registration_path) %></li>
+          <li class="sidebar"><%= link_to('Sign up', new_user_registration_path) %></li>
         <% end %>
 
           <% if user_signed_in? %>
-        <li><%= link_to('Logout', destroy_user_session_path, method: :delete)%></li>
+        <li class="sidebar"><%= link_to('Logout', destroy_user_session_path, method: :delete)%></li>
           <% else %>
-        </li><%= link_to('Login', new_user_session_path)%></li>
+        </li class="sidebar"><%= link_to('Login', new_user_session_path)%></li>
 <% end %>
 </ul>
 </div><!--end nav div-->
