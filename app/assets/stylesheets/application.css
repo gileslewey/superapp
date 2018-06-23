@@ -23,9 +23,6 @@
      vertical-align: middle;
  }
 
-a {
-  color:white;
-}
 nav .navbarCollapse ul li a {
   font-family: 'Shadows Into Light', cursive;
   font-size: 24px;
@@ -146,6 +143,9 @@ margin-right: 2%;
 
 a:hover {
   color: #75DBCD;
+}
+.icon-bar {
+  background-color: whitesmoke;
 }
 a:visited {
   color: black;
