@@ -147,6 +147,10 @@ a:hover {
 .icon-bar {
   background-color: whitesmoke;
 }
+input {
+border-color:#ccc;
+border-width: 1px;
+}
 a:visited {
   color: black;
 }
