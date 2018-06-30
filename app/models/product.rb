@@ -1,13 +1,9 @@
 class Product < ApplicationRecord
   has_many :comments
+  has_many :orders
   validates :name, presence: true
   validates :quality, presence: true
   validates :price, presence: true
-  has_many :order
-  has_many :comments
-  validates :price, presence: true
-  has_many :order
-  has_many :comments
 
 #wasn't working on Heroku without public, not sure why??
 public
