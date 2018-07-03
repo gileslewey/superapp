@@ -6,10 +6,10 @@ describe Product do
 
     before do
       @product = Product.create!(name: "Bert Original", quality: "new", price: "1,000")
-      user = User.create!(email: "a@ab.com", password: "asdfgh")
-      @product.comments.create!(rating: 1, user: user, body: "Awful coin!")
-      @product.comments.create!(rating: 3, user: user, body: "Ok coin!")
-      @product.comments.create!(rating: 5, user: user, body: "Great coin!")
+      @user = FactoryBot.create(:user)
+      @product.comments.create!(rating: 1, user: @user, body: "Awful coin!")
+      @product.comments.create!(rating: 3, user: @user, body: "Ok coin!")
+      @product.comments.create!(rating: 5, user: @user, body: "Great coin!")
     end
 
     it "returns the average rating of all comments" do
