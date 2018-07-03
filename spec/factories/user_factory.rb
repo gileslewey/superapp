@@ -5,9 +5,9 @@ FactoryBot.define do
 
   factory :user do
     email
-    password "1234567890"
-    first_name "Peter"
-    last_name "Example"
+    password "123456"
+    first_name "valid"
+    last_name "user"
     admin false
   end
 end
