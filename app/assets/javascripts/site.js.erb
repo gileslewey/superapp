@@ -7,6 +7,14 @@ $(document).on('turbolinks:load', function(){
     scoreName: 'comment[rating]'
   });
 
+
+    $(".img-zoom").elevateZoom({
+      zoomType: "lens",
+      lensShape: "round",
+      lensSize: 200,
+    });
+
+
   $('.rated').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
     starOff: '<%= asset_path 'star-off.png' %>',
