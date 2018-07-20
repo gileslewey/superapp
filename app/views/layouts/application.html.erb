@@ -42,14 +42,12 @@
           <%= submit_tag("Search", class: 'btn btn-search') %>
         <% end %>
       </li>
-
-
-          <% if user_signed_in? %>
-        <li class="sidebar"><%= link_to('logout', destroy_user_session_path, method: :delete)%></li>
-          <% else %>
-        <li class="sidebar"><%= link_to('login', new_user_session_path)%></li>
-<% end %>
-</ul>
+        <% if user_signed_in? %>
+      <li class="sidebar"><%= link_to('logout', destroy_user_session_path, method: :delete)%></li>
+        <% else %>
+      <li class="sidebar"><%= link_to('login', new_user_session_path)%></li>
+        <% end %>
+  </ul>
 </div><!--end nav div-->
   </div><!--end container-fluid-->
   </div><!--end navbar collapse-->
