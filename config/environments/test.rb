@@ -36,7 +36,9 @@ Rails.application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
-
+  config.web_socket_server_url = "wss://your-app-name.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://superapp.herokuapp.com',
+    'http://superapp.herokuapp.com']
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
