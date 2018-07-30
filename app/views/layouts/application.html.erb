@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>Superapp</title>
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
@@ -16,7 +15,7 @@
 <body>
   <nav class="navbar navbar-fixed-top" role="navigation">
     <div class="container-fluid">
-      <div class="navbar-header">
+    <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbarCollapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -37,15 +36,15 @@
 <div  class = "nav navbar-nav navbar-right navblock-margin" >
   <ul>
       <li class="sidebar">
-        <%= form_with(url: products_path, method: 'get', local: true, class: 'navbar-form navbar-right') do |form| %>
-          <%= form.text_field :q, id: 'q', value: params[:q], type: 'text', class: 'form-control', placeholder: 'search text' %>
-          <%= submit_tag("Search", class: 'btn btn-search') %>
+        <%= form_with(url: products_path, method: "get", local: true, class: "navbar-form navbar-right") do |form| %>
+          <%= form.text_field :q, id: "q", value: params[:q], type: "text", class: "form-control", placeholder: "search Hobo Nickels" %>
+          <%= submit_tag("Search", class: "btn btn-search") %>
         <% end %>
       </li>
         <% if user_signed_in? %>
-      <li class="sidebar"><%= link_to('logout', destroy_user_session_path, method: :delete)%></li>
+           <li class="sidebar btn btn-search"><%= link_to("logout", destroy_user_session_path, method: :delete)%></li>
         <% else %>
-      <li class="sidebar"><%= link_to('login', new_user_session_path)%></li>
+           <li class="sidebar btn btn-search"><%= link_to("login", new_user_session_path)%></li>
         <% end %>
   </ul>
 </div><!--end nav div-->
@@ -53,14 +52,16 @@
   </div><!--end navbar collapse-->
 </nav>
 <!-- Flash Notice Tags -->
+<div class="flashtags">
     <% if notice %>
       <div id="notice" class="alert alert-warning"><%= notice %></div>
     <% end %>
     <% if alert %>
       <div id="alert" class="alert alert-danger"><%= alert %></div>
     <% end %>
+</div>
     <br><br>
-<%= yield %>
+<%= yield %><!--spacing-->
 <br><br><br><br>
 <footer class="navbar-default navbar-fixed-bottom" style="background-color: #75DBCD;">
  <div class="container-fluid">

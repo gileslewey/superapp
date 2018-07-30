@@ -1,52 +1,38 @@
 <!-- Flash Notice Tags -->
 <% cache @product do %>
-<div class="wrapper" data-product-id="<%= @product.id %>">
-<div class="form-wrapper">
-  <div class="form-group">
+  <div class="row" data-product-id="<%= @product.id %>">
+    <div class="col-sm-6 col-xs-12">
  <p class="lead">
-  Name:</strong>
+  <strong>Name:</strong>
   <%= @product.name %>
 </p>
-</div>
-  <div class="form-group">
 <p>
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
-</div>
-  <div class="form-group">
 <p>
   <%= image_tag(@product.image_url, data_zoom_image: @product.image_url, width: "50%", class: "img-zoom") %>
 </p>
-</div>
-  <div class="form-group">
 <p>
   <strong>quality:</strong>
   <%= @product.quality %>
 </p>
-</div>
-  <div class="form-group">
 <p>
   <strong>Price:</strong>
   $<%= @product.price %>
 </p>
 </div>
-  <div class="form-group">
+    <div class="col-sm-6 col-xs-12">
 <p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p>
-</div>
-<div class="form-group">
  <div id="comments">
   <%= render 'new_comment' %>
   <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
   <%= render 'comments' %>
   <%= will_paginate @comments%>
 </div>
-<div>
-  <div class="form-group">
 <%= form_with(url: '/payments/create') do |form| %>
   <%= render partial: "shared/stripe_checkout_button" %>
 <% end %>
-</div>
 <div>
 <% if current_user && current_user.admin?%>
   <li><%= link_to 'Edit', edit_product_path(@product), class: "btn btn-search" %> | </li>
@@ -54,4 +40,5 @@
 <li><%= link_to 'Back', products_path, class: 'btn btn-login'  %></li>
 </div>
 <% end %>
-</div><!--end wrapper>
+</div>
+</div>-->

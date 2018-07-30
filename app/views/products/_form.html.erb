@@ -9,33 +9,36 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="product-edit">
+    <div class="login-container">
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :product_name %>
+    <%= form.text_field :name, id: :product_name, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description, id: :product_description, size: '60x5' %>
+    <%= form.text_area :description, id: :product_description, class: "form-control", size: '60x5' %>
   </div>
 
   <div class="field">
     <%= form.label :image_url %>
-    <%= form.text_field :image_url, id: :product_image_url %>
+    <%= form.text_field :image_url, id: :product_image_url, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :quality %>
-    <%= form.text_field :quality %>
+    <%= form.text_field :quality, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :price %>
-    <%= form.text_field :price %>
+    <%= form.text_field :price, class: "form-control" %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+</div>
+</div>

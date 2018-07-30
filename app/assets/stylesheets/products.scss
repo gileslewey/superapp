@@ -18,6 +18,7 @@ h5 {
 }
 .img-constrain {
   max-width: 200px;
+  vertical-align: middle;
 }
 
 li .btn-search {
@@ -40,4 +41,47 @@ li .btn-login:hover {
      background-color: #75DBCD;
   color: whitesmoke;
   font-family: 'Copse', serif;
+}
+.row {
+  width: 90%;
+  margin: auto;
+}
+.product_wrap {
+  max-width: 375px;
+  margin: 5px;
+  padding: 10px;
+  box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.58);
+  background-color: #fff;
+}
+.product_name {
+  padding: 20px 10px 8px;
+  border: none;
+  font-family: Zeyada, cursive;
+  font-size: 3vw;
+  letter-spacing: 0.01em;
+  color: #454545;
+}
+.product_info {
+  padding: 3px;
+  font-family: Poiret One, Geneva, sans-serif;
+  font-weight: 400;
+  font-size: 1.3vw;
+  background-color: #64ADB8;
+  color: #fff;
+}
+.product_description {
+  padding: 3px;
+  font-family: Poiret One, Geneva, sans-serif;
+  font-weight: 400;
+  font-size: 1.5vw;
+}
+.product_rating {
+  padding-bottom: 35px;
+}
+.product_views {
+  font-family: Poiret One, Geneva, sans-serif;
+  font-weight: 700;
+  font-size: 1.7vw;
+  color: #FF9A20;
+  text-shadow: 1px 1px #2B2828;
 }

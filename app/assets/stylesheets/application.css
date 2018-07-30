@@ -18,6 +18,12 @@
  h1 {
    margin-top: 4%;
  }
+
+ h4 {
+   font-size: 22px;
+   font-family: "Fira Sans";
+ }
+
  nav ul li {
      display: inline-block;
      vertical-align: middle;
@@ -29,23 +35,30 @@ nav .navbarCollapse ul li a {
   color: whitesmoke;
 }
 
-nav .navbarCollapse ul li.sidebar a {
-  font-size: 16px;
-  font-family: 'Copse', serif;
+nav .navbarCollapse ul li a:hover {
+  background-color: inherit;
   color: #eea838;
+  font-size: 24px;
+}
+nav .navbarCollapse ul li.sidebar {
+  font-size: 14px;
+  font-family: 'Copse', serif;
+  color: black;
+    width: auto !important;
+}
+nav .navbarCollapse ul li.sidebar a {
+  font-size: 14px;
+  font-family: 'Copse', serif;
+  color: black;
+  width: 64px !important;
 }
 
-nav .navbarCollapse ul li a:hover {
-  background-color: #6f2d2e;
-  color: #eea838;
-  font-size: 26px;
-}
 
 nav .navbarCollapse ul li.sidebar a:hover {
-  background-color: #6f2d2e;
-    font-family: 'Copse', serif;
-  font-size: 16px;
+  font-family: 'Copse', serif;
+  font-size: 14px;
   color: whitesmoke;
+  height: 34px;
 }
 
 body {
@@ -57,7 +70,6 @@ body {
 
 .navbar {
   background-color: #6f2d2e;
-  font-family: 'Shadows Into Light', cursive;
 }
 
 .nav-space {
@@ -74,10 +86,6 @@ body {
    font-family: 'Fira Sans', sans-serif;
 }
 
-.hobo-image {
- height: 78px;
-}
-
 .navbar-text {
   font-family: 'Shadows Into Light', cursive;
   text-align: left;
@@ -87,17 +95,32 @@ body {
 
 .btn-search {
   background-color: #85CB33;
-  color: black;
+}
+li.sidebar.btn.btn-search {
+  height: 34px !important;
+  width: 64px !important
   font-family: 'Copse', serif;
 }
+
+li.sidebar.btn.btn-search a {
+  height: 34px !important;
+  width: 64px !important
+  vertical-align: middle;
+  font-family: 'Copse', serif;
+}
+/*a {
+  color: white;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 14px;
+    height: 34px !important;
+    display: center;
+}*/
+
+
 .navblock-margin {
 margin-right: 2%;
 }
-.btn-search:hover {
-  background-color: #85CB33;
-  color: whitesmoke;
-  font-family: 'Copse', serif;
-}
+
 /* .btn-login {
    background-color: #75DBCD;
    color: black;
@@ -117,17 +140,8 @@ margin-right: 2%;
     background-color: #75DBCD;
     color: whitesmoke;
     font-family: 'Copse', serif;
-  }
-  .btn-login {
-     background-color: #75DBCD;
-     color: black;
-     font-family: 'Copse', serif;
-   }
-  .btn-login:hover {
-     background-color: #75DBCD;
-     color: whitesmoke;
-     font-family: 'Copse', serif;
-   }*/
+  }*/
+
 .span-blue {
    color: #75DBCD;
 }
@@ -140,13 +154,13 @@ margin-right: 2%;
   color: whitesmoke;
 }
 
-
 a:hover {
   color: #75DBCD;
 }
 .icon-bar {
   background-color: whitesmoke;
 }
+
 input {
 border-color:#ccc;
 border-width: 1px;
@@ -157,7 +171,9 @@ a:visited {
 #notice {
   color: green;
 }
-
+.flashtags {
+  margin-top: 5%
+}
 .field_with_errors {
   padding: 2px;
   background-color: red;
@@ -180,4 +196,80 @@ a:visited {
     background-color: #c00;
     color: #fff;
   }
+}
+/* Login form */
+
+
+
+.login {
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+}
+.product-edit {
+  width: 526px;
+  margin: 18px auto;
+  font-size: 14px;
+}
+
+.login-header {
+  background: #28d;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.login-container {
+  background: #ced4ee;
+  padding: 12px;
+}
+
+.login .field {
+  padding: 8px;
+}
+
+.field-name {
+  margin: 0px !important;
+}
+
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+.remember{
+  font-size: 12px;
+}
+.login input[type="submit"] {
+  background: #28d;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+  background: #17c;
+}
+.input-group {
+  margin: 10px;
+}
+.actions {
+  margin: 10px;
+}
+/* Buttons' focus effect */
+.login input[type="submit"]:focus {
+  border-color: #05a;
+}
+
+.login .forgot {
+  text-color: #fff;
 }
