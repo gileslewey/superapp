@@ -17,6 +17,7 @@
  */
  h1 {
    margin-top: 4%;
+   font-family: "Fira Sans";
  }
 
  h4 {
@@ -24,6 +25,10 @@
    font-family: "Fira Sans";
  }
 
+p {
+     font-family: "Fira Sans";
+     font-size: 16px;
+}
  nav ul li {
      display: inline-block;
      vertical-align: middle;

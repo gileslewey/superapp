@@ -1,9 +1,11 @@
 
-<div class="simple_wrapper">
+
 <h1>Contact Us</h1>
 
 <%= flash[:notice] %>
 
+<div class="product-edit">
+  <div class="login-container">
 <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
 <div class="form-wrapper">
 <div class="row">
@@ -24,4 +26,5 @@
 <%= form.submit "Send", class: "btn-login" %>
 </div><!--form-wrapper-->
 <% end %>
-</div><!--simple_wrapper-->
+</div>
+</div>
