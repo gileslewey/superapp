@@ -7,7 +7,7 @@ before_action :authenticate_user!
   end
 
   def show
-      @order = Order.find(params[:id])
+      @order = Order.find(params[:id]) 
   end
 
   def new
