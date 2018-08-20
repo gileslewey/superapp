@@ -38,13 +38,13 @@
       <li class="sidebar">
         <%= form_with(url: products_path, method: "get", local: true, class: "navbar-form navbar-right") do |form| %>
           <%= form.text_field :q, id: "q", value: params[:q], type: "text", class: "form-control", placeholder: "search Hobo Nickels" %>
-          <%= submit_tag("Search", class: "btn btn-search") %>
+          <%= submit_tag("Search", class: "btn btn-search", font: "fira sans") %>
         <% end %>
       </li>
         <% if user_signed_in? %>
-           <li class="sidebar btn btn-search"><%= link_to("logout", destroy_user_session_path, method: :delete)%></li>
+           <li><%= link_to("logout", destroy_user_session_path, method: :delete)%></li>
         <% else %>
-           <li class="sidebar btn btn-search"><%= link_to("login", new_user_session_path)%></li>
+           <li><%= link_to("login", new_user_session_path)%></li>
         <% end %>
   </ul>
 </div><!--end nav div-->

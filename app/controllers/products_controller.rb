@@ -6,11 +6,11 @@ class ProductsController < ApplicationController
   # @products = params[:q].present? ? Product.search(params[:q]) : Product.all
   def index
     if params[:q]
+      search_term = params[:q]
       @products = Product.search(search_term)
     else
       @products = Product.all
     end
-      @products = @products.paginate(:page => params[:page], :per_page=>6)
   end
 
 
