@@ -3,25 +3,47 @@
 <div class="container-fluid">
   <div class="row" data-product-id="<%= @product.id %>">
     <div class="col-sm-6 col-xs-12">
- <p class="lead">
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-<p>
-  <%= image_tag(@product.image_url, data_zoom_image: @product.image_url, width: "50%", class: "img-zoom") %>
-</p>
-<p>
-  <strong>quality:</strong>
-  <%= @product.quality %>
-</p>
-<p>
-  <strong>Price:</strong>
-  $<%= @product.price %>
-</p>
+      <p class="lead">
+        <strong>Name:</strong>
+        <%= @product.name %>
+      </p>
+      <p>
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </p>
+      <p>
+        <%= image_tag(@product.image_url, data_zoom_image: @product.image_url, width: "50%", class: "img-zoom") %>
+      </p>
+      <p>
+        <strong>quality:</strong>
+        <%= @product.quality %>
+      </p>
+      <p>
+        <strong>Price:</strong>
+        <%= @product.price %>
+      </p>
+    </div>
+      <p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p>
+    <div class = "product_price">
+      <p>Price: </br><strong><%= (@product.price) %></strong></p>
+    </div>
+    <div class ="product_buy">
+      <% if signed_in? %>
+        <%= form_with(url: '/payments/create') do |form| %>
+        <%= hidden_field_tag(:product_id, @product.id) %>
+        <%= render partial: "shared/stripe_checkout_button", locals: {product: @product} %>
+        <% end %>
+      <% end %>
+    </div><!--end body-->
+    <div class="col-xs-12 col-sm-6 nopadding">
+      <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+        <%= render 'comments' %>
+      </div>
+      <div class="col-xs-12 col-sm-6 nopadding">
+        <%= render 'new_comment' %>
+      </div>
+    </div>
+  </div>
 </div>
 <!--    <div class="col-sm-6 col-xs-12">
 <p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p>
@@ -42,25 +64,3 @@
 </div>
 </div>
 </div>-->
-<p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p>
-<div class = "product_price">
-<p>Price: </br><strong><%= (@product.price) %></strong></p>
-</div>
-<div class ="product_buy">
-  <% if signed_in? %>
-    <%= form_with(url: '/payments/create') do |form| %>
-    <%= hidden_field_tag(:product_id, @product.id) %>
-    <%= render partial: "shared/stripe_checkout_button", locals: {product: @product} %>
-    <% end %>
-  <% end %>
-</div><!--end body-->
-</div>
-</div>
-<div class="col-xs-12 col-sm-6 nopadding">
-<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
-<%= render 'comments' %>
-</div>
-<div class="col-xs-12 col-sm-6 nopadding">
-<%= render 'new_comment' %>
-</div>
-</div>
