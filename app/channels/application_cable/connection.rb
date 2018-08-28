@@ -9,6 +9,8 @@ module ApplicationCable
     def diconnect
 
     end
+  end
+
 
   protected
 
@@ -19,5 +21,4 @@ module ApplicationCable
         reject_unauthorized_connection
       end
     end
-  end
 end
