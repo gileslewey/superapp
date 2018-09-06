@@ -1,71 +1,49 @@
-<% provide(:title, "Bike Details") %>
-
-<p id="notice"><%= notice %></p>
-
+<!-- Flash Notice Tags -->
+<!--<% cache @product do %>-->
 <div class="container-fluid">
   <div class="row" data-product-id="<%= @product.id %>">
-    <div class="col-md-6">
-      <p>
-      <% if @product.image_url.present? %>
-        <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "@product.image_url") %>
-      <% end %>
-      </p>
-    </div> <!-- end col -->
-
-    <div class="col-md-6 product">
-      <p>
+    <div class="col-sm-6 col-xs-12">
+      <p class="lead">
         <strong>Name:</strong>
-        <%= @product.name %>
-      </p>
+      <%= @product.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+<p>
+  <%= image_tag(@product.image_url, data_zoom_image: @product.image_url, width: "50%", class: "img-zoom") %>
+</p>
+<p>
+  <strong>quality:</strong>
+  <%= @product.quality %>
+</p>
+<p>
+  <strong>Price:</strong>
+  $<%= @product.price %>
+</p>
+</div>
 
-      <p>
-        <strong>Description:</strong>
-        <%= @product.description %>
-      </p>
-
-      <p>
-        <strong>Grade:</strong>
-        <%= @product.quality %>
-      </p>
-
-      <p>
-        <strong>Price:</strong>
-        <%= number_to_currency(@product.price, unit: '€', precision: 2) %>
-      </p>
-
-      <p>
-        <strong>Average Rating:</strong>
-        <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div>
-      </p>
-
-      <%= form_with(url: '/payments/create') do |form| %>
-        <%= render partial: "shared/stripe_checkout_button" %>
-        <%= hidden_field_tag(:product_id, @product.id) %>
-      <% end %>
-
-      <br><br>
-      <%= render 'new_comment' %>
-
-    </div> <!-- end col -->
-  </div> <!-- end row -->
- </div> <!-- end container -->
-
- <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-6 sayings">
-      <%= render 'comments' %>
-
-      <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
-
-      <div class="digg_pagination">
-        <%= will_paginate @comments, :container => false %>
-      </div>
-    </div>
-  </div>
-</div> <!-- end container -->
-
-<br><br>
-<%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default" %> |
-<%= link_to 'Back', products_path, class: "btn btn-default" %>
-
-<br><br>
+<p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p>
+<div class = "product_price">
+<p>Price: </br><strong><%= (@product.price) %></strong></p>
+</div>
+<div class ="product_buy">
+  <% if signed_in? %>
+    <%= form_with(url: '/payments/create') do |form| %>
+    <%= hidden_field_tag(:product_id, @product.id) %>
+    <%= render partial: "shared/stripe_checkout_button", locals: {product: @product} %>
+    <% end %>
+  <% end %>
+    <% end %>
+</div><!--end body-->
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 nopadding">
+<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+<%= render 'comments' %>
+</div>
+<div class="col-xs-12 col-sm-6 nopadding">
+<%= render 'new_comment' %>
+</div>
+</div>
