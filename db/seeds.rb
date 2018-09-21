@@ -6,10 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-  Order.create(user_id: 1, product_id: 1, total: 10.0)
-
-  Order.create(user_id: 1, product_id: 2, total: 5.0)
-
   Product.create(name: "Seth Batista Carving", description: "Hand Carved Buffalo Nickel coin human SKULL - Hobo nickel by Seth Basista", image_url: "skullindian.jpg", quality: "New", price: "95")
 
   Product.create(name: "Steampunk Carving", description: "Hand carved by Alexey Saburov", image_url: "steampunk.jpg", quality: "New", price: "95")
