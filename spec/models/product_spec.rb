@@ -2,11 +2,10 @@ require 'rails_helper'
 
 describe Product do
 
-  let(:product) { Product.create!(name: "hobo coin", quality: "Good", price: 10) }
-  let(:user) { User.create!(email: "John@john.com", first_name: "user", last_name: "Smith",
-    admin: false, password: "Password123") }
-
   context "when the product has comments" do
+
+  let(:product) { Product.create!(name: "hobo coin", quality: "Good", price: 10) }
+  let(:user) { FactoryBot.create(:user) }
 
     before do
       product.comments.create!(rating: 1, user: user, body: "Awful!")
@@ -19,7 +18,7 @@ describe Product do
     end
 
     it "returns the lowest rating comment" do
-      expect(product.lowerest_rating_comment.rating).to eq 1
+      expect(product.lowest_rating_comment.rating).to eq 1
     end
 
     it "returns the highest rating comment" do
