@@ -1,4 +1,6 @@
 class PaymentsController < ApplicationController
+  before_action :authenticate_user!
+
   def create
     token = params[:stripeToken]
     @product = Product.find(params[:product_id])
@@ -19,7 +21,7 @@ class PaymentsController < ApplicationController
               total: @product.price.to_i
             )
 
-              UserMailer.payment_received(@user, order).deliver_now
+              UserMailer.order_created(@user,@product).deliver_now
           end
           redirect_to '/payments/success', notice: "Your payment was successful. Thank you for purchasing."
 
@@ -29,5 +31,5 @@ class PaymentsController < ApplicationController
           err = body[:error]
           flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
         end
-      end 
+      end
     end
