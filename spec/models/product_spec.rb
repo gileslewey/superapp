@@ -4,8 +4,8 @@ describe Product do
 
   context "when the product has comments" do
 
-  let(:product) { Product.create!(name: "hobo coin", quality: "Good", price: 10) }
-  let(:user) { FactoryBot.create(:user) }
+    let(:product) { FactoryBot.create(:product) }
+    let(:user) { FactoryBot.create(:user) }
 
     before do
       product.comments.create!(rating: 1, user: user, body: "Awful!")
@@ -24,6 +24,9 @@ describe Product do
     it "returns the highest rating comment" do
       expect(product.highest_rating_comment.rating).to eq 5
     end
+  end
+
+  context "testing description validation" do
 
     it "is not valid without a name" do
       expect(Product.new(description: "It is alright")).not_to be_valid

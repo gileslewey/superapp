@@ -2,9 +2,9 @@ require 'rails_helper'
 
 describe ProductsController, type: :controller do
   let(:product) { FactoryBot.create(:product) }
-  let(:invalid_product) { FactoryBot.create(:product) }
   let(:user) { FactoryBot.create(:user) }
-  let(:admin) { FactoryBot.create(:admin) }
+  let(:user2) { FactoryBot.create(:user2) }
+
 
   describe 'GET #index' do
     context 'when a user goes to index page' do
@@ -28,7 +28,9 @@ describe ProductsController, type: :controller do
   describe 'GET #edit' do
     context 'when an admin goes to edit a product' do
       before do
-        sign_in admin
+        sign_in user2
+      end
+
         it 'renders the edit template' do
           get :edit, params: { id: product.id }
           expect(assigns(:product)).to eq product
@@ -40,6 +42,8 @@ describe ProductsController, type: :controller do
     context 'when a non-admin user goes to edit a product' do
       before do
         sign_in user
+      end
+
         it 'redirects user to root path' do
           get :edit, params: { id: product.id }
           expect(assigns(:product)).to eq product
@@ -47,12 +51,14 @@ describe ProductsController, type: :controller do
         end
       end
     end
-  end
+
 
   describe 'POST #create' do
     context 'when an admin submits a new product' do
       before do
-        sign_in admin
+        sign_in user2
+      end
+
         it 'creates a new product if valid' do
           post :create, params: { product: attributes_for(product) }
           expect(status).to be_ok
@@ -64,12 +70,13 @@ describe ProductsController, type: :controller do
         end
       end
     end
-  end
 
   describe 'PUT #update' do
     context 'when an admin submits an update to a product' do
       before do
-        sign_in admin
+        sign_in user2
+      end
+
         it 'updates product if valid' do
           put :update, params: { product: product }
           expect(status).to be_ok
@@ -83,10 +90,11 @@ describe ProductsController, type: :controller do
         end
       end
     end
-  end
 
   context 'DELETE #destroy' do
     before do
+      sign_in user
+    end
       let(:product_to_delete) { FactoryBot.create(:product) }
 
       it 'deletes product by id' do
@@ -94,5 +102,3 @@ describe ProductsController, type: :controller do
         expect(notice).to eq 'Product was successfully destroyed.'
       end
     end
-  end
-end
