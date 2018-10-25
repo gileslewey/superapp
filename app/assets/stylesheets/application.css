@@ -105,13 +105,13 @@ body {
 }
 li.sidebar.btn.btn-search {
   height: 34px !important;
-  width: 64px !important
+  width: 64px !important;
   font-family: 'Copse', serif;
 }
 
 li.sidebar.btn.btn-search a {
   height: 34px !important;
-  width: 64px !important
+  width: 64px !important;
   vertical-align: middle;
   font-family: 'Copse', serif;
 }
